@@ -42,9 +42,6 @@ function bombGen(){
         if (! bombs.includes(singleBomb)){
             bombs.push(singleBomb);
         }
-
-        
-        
     }
     return bombs;
 };
@@ -52,6 +49,8 @@ function bombGen(){
 //creo un ciclo for che cicla la funzione n volte quanto il numero dei quadrati che voglio generare
 playButton.addEventListener('click', function (){
     
+    bombGen();
+    console.log(bombs)
 
     for (let i = 0; i < 100; i++){
 
@@ -67,8 +66,5 @@ playButton.addEventListener('click', function (){
         })
 
     }
-
-    bombGen();
-    console.log(bombs)
 })   
 

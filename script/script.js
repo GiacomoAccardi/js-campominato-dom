@@ -19,6 +19,9 @@
 const grid = document.getElementById('grid');
 const playButton = document.getElementById('play')
 
+//Creo un array per contenere le bombe
+let bombs = []
+
 //Creo la funzione 
 function generate() {
      let sCell = document.createElement('div');
@@ -27,6 +30,7 @@ function generate() {
 
      return sCell
 }
+
 
 //creo un ciclo for che cicla la funzione n volte quanto il numero dei quadrati che voglio generare
 playButton.addEventListener('click', function (){

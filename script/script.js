@@ -76,7 +76,8 @@ playButton.addEventListener('click', function (){
 
         //controllo che la cella selezionata sia o meno una bomba.
         currentCell.addEventListener('click', function(){
-                
+
+            this.style.pointerEvents = 'none';
 
             if (bombs.includes(numCell)){
                 currentCell.classList.add('bomb');
@@ -87,6 +88,7 @@ playButton.addEventListener('click', function (){
                 console.log(numCell);
                 incremental_score();
             }
+
         })
     }
 })   

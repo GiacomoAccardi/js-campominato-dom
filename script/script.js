@@ -18,6 +18,7 @@
 //Recupero gli elementi dal DOM
 const grid = document.getElementById('grid');
 const playButton = document.getElementById('play');
+const resetButton = document.getElementById('reset');
 
 //Creo un array per contenere le bombe
 const bombs = [];
@@ -59,6 +60,8 @@ function incremental_score(){
 //creo un ciclo for che cicla la funzione n volte quanto il numero dei quadrati che voglio generare
 playButton.addEventListener('click', function (){
     
+    this.style.pointerEvents = 'none';
+
     //avvio la funzione che mi permette di generare le bombe.
     bombGen();
     console.log(bombs)
@@ -92,5 +95,13 @@ playButton.addEventListener('click', function (){
 
         })
     }
+
 })   
 
+    //attivo il bottone per resettare il gioco
+
+    resetButton.addEventListener('click', function (){
+
+        location.reload()
+    
+    });

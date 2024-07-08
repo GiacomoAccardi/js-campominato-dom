@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*General page classes*/
+
+.container{
+    background-color: rgb(32, 32, 32);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: rgb(54, 54, 54) ;
+    height: 70px;
+}
+
+header .logo-section{
+    display: flex;
+    align-items: center;
+}
+
+.logo-section i{
+    font-size: 25pt;
+    margin-right: 10px;
+}
+
+header button{
+    background-color: rgb(90, 120, 253);
+    padding: 0 40px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 14pt;
+}
+
+main{
+    height: calc(100vh - 140px);
+    display: flex;
+}
+
+footer div{
+    align-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 500px;
+}
+
+.cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid rgb(124, 124, 124);
+    color: rgb(124, 124, 124);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10pt;
+}
+
+.clicked{
+    background-color: rgb(90, 120, 253) ;
+    color: white;
+    border: 2px solid white
+}

@@ -17,7 +17,10 @@
 
 //Recupero gli elementi dal DOM
 const grid = document.getElementById('grid');
-const playButton = document.getElementById('play')
+const playButton = document.getElementById('play');
+let score = document.getElementById('score-target');
+
+let bombflag = false;
 
 //Creo un array per contenere le bombe
 const bombs = [];
@@ -49,6 +52,7 @@ function bombGen(){
 //creo un ciclo for che cicla la funzione n volte quanto il numero dei quadrati che voglio generare
 playButton.addEventListener('click', function (){
     
+    //avvio la funzione che mi permette di generare le bombe.
     bombGen();
     console.log(bombs)
 
@@ -62,16 +66,15 @@ playButton.addEventListener('click', function (){
 
         let numCell = i + 1;
 
+        //controllo che la cella selezionata sia o meno una bomba.
         currentCell.addEventListener('click', function(){
-
-            for (k = 0; k <= bombs.length; k++){
-
-                if (numCell == bombs[k]){
-                    this.classList.add('bomb')
-                } else {
-                    this.classList.add('clicked')
-                    console.log(numCell)
-                }
+                
+            if (bombs.includes(numCell)){
+                currentCell.classList.add('bomb')
+                alert('Hai calpestato una bomba! Hai perso :(')
+            } else {
+                this.classList.add('clicked')
+                console.log(numCell)
             }
         })
     }

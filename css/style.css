@@ -89,3 +89,10 @@ main{
     color: white;
     border: 2px solid white
 }
+#score-target{
+    color: rgb(136, 255, 115);
+    font-size: 54pt;
+}
+#punteggio{
+    text-align: center;
+}

@@ -52,7 +52,7 @@ let baseScore = 0;
 
 function incremental_score(){
     baseScore += 1;
-    document.getElementById('score-target').textContent = 'Il tuo punteggio è = ' + baseScore;
+    document.getElementById('score-target').textContent = baseScore;
 };
 
 
@@ -82,7 +82,7 @@ playButton.addEventListener('click', function (){
             if (bombs.includes(numCell)){
                 currentCell.classList.add('bomb');
                 alert('Hai calpestato una bomba! Hai perso :(');
-                document.getElementById('score-target').textContent = 'Hai perso, questo è il tuo punteggio = ' + baseScore;
+                document.getElementById('score-target').textContent = baseScore;
             } else {
                 this.classList.add('clicked');
                 console.log(numCell);

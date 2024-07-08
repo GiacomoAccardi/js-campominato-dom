@@ -20,7 +20,7 @@ const grid = document.getElementById('grid');
 const playButton = document.getElementById('play')
 
 //Creo un array per contenere le bombe
-let bombs = []
+const bombs = [];
 
 //Creo la funzione 
 function generate() {
@@ -31,6 +31,22 @@ function generate() {
      return sCell
 }
 
+//Creo una funzione per generare casualmente dei numeri 
+
+function bombGen(){
+    //creo sedici numeri causli che non si ripetono e li inserisco come valori dell'array 
+    while (bombs.length < 16) {
+    
+        const singleBomb = Math.floor(Math.random()*100) + 1;
+
+        if (! bombs.includes(singleBomb)){
+            bombs.push(singleBomb);
+        }
+
+        return singleBomb;
+        
+    }
+};
 
 //creo un ciclo for che cicla la funzione n volte quanto il numero dei quadrati che voglio generare
 playButton.addEventListener('click', function (){
@@ -50,5 +66,7 @@ playButton.addEventListener('click', function (){
         })
 
     }
-   
+
+
 })   
+

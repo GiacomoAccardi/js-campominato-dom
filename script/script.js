@@ -60,11 +60,20 @@ playButton.addEventListener('click', function (){
 
         grid.append(currentCell)
 
-        currentCell.addEventListener('click', function(){
-            this.classList.toggle('clicked')
-            console.log(i + 1)
-        })
+        let numCell = i + 1;
 
+        currentCell.addEventListener('click', function(){
+
+            for (k = 0; k <= bombs.length; k++){
+
+                if (numCell == bombs[k]){
+                    this.classList.add('bomb')
+                } else {
+                    this.classList.add('clicked')
+                    console.log(numCell)
+                }
+            }
+        })
     }
 })   
 

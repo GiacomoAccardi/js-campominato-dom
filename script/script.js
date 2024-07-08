@@ -8,7 +8,10 @@
 
 ------------------------------PARTE DUE--------------------------------------------------------
 
-1.
+1. creo un array vuoto che conterrà la posizione nella griglia di tutte le bombe
+2. creo una funzione che genera 16 numeri randomici da 1 a 100 (senza doppioni) e li pusha dentro l'array
+3. rendo le celle che contengono un numero corrispondente ai valori dell'array delle bombe, ovvero, nel momento in cui l'utente le clicca la cella cliccata diventa rossa e la partita termina.
+  >> SE non viene cliccata alcuna bomba, la partita termina con una vittoria e vie mostrato il numero di caselle cliccate come punteggio.
 
 */
 

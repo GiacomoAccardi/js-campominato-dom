@@ -83,6 +83,7 @@ playButton.addEventListener('click', function (){
                 currentCell.classList.add('bomb');
                 alert('Hai calpestato una bomba! Hai perso :(');
                 document.getElementById('score-target').textContent = baseScore;
+                grid.style.pointerEvents = 'none';
             } else {
                 this.classList.add('clicked');
                 console.log(numCell);
